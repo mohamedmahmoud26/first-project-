@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 model = load_model()
 
 # App Title
-st.title("🎓 Student Performance Prediction App")
+st.title("Student Performance Prediction App")
 st.write("Predict the **final grade (G3)** of a student based on various personal and academic features.")
 
 # User Data Entry Section
@@ -104,19 +104,9 @@ input_df = pd.DataFrame({
 st.write("### Input Summary")
 st.dataframe(input_df)
 
-# 🔮 Prediction Button
+# Prediction Button
 
-# if st.button("🔮 Predict Final Grade"):
-#     preds = predict(input_df)
-#     st.success(f"Predicted Final Grade (G3): **{preds[0]}**")
-#     # Create a simple bar chart
-#     df = {
-
-#     }
-#     st.bar_chart(df)
-
-
-if st.button("🔮 Predict Final Grade"):
+if st.button("Predict Final Grade"):
     preds = predict(input_df)
     st.metric(label="Predicted Final Grade (G3)", value=f"{int(preds[0])} / 20")
 

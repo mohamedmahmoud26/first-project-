@@ -38,6 +38,7 @@ def predict(data):
     model, _ = load_model()
     processed_data = transform_data(data)
     prediction = model.predict(processed_data)
+    prediction[:] = min(prediction, 20)
     return np.round(prediction)
 
 
